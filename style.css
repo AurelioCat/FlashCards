@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  color: #FFF;
+}
+
+.title {
+  position: absolute;
+  top: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.container {
+  margin-top: 50px;
+  background: #A9CCE3;
+  display: flex;
+  width: 360px;
+  height: 360px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+}
+
+.cards {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  transition: all 1s linear;
+  transform-style: preserve-3d;
+}
+
+.front, .back {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+}
+
+
+.front {
+  background: #FFF;
+  color: #3498DB;
+  z-index: 2;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #3498DB;
+  color: #FFF;
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.cards:hover {
+  transform: rotateY(180deg);
+}
+
+.cards {
+  perspective: 1000px
+}
